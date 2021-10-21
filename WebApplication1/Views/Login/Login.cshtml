@@ -1,0 +1,45 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="renderer" content="webkit">
+    <meta name="format-detection" content="telephone=no" />
+    <title>欢迎使用上海屹超信息网站后台管理系统</title>
+
+    <link href="~/css/Login.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery.form.js"></script>
+</head>
+    <body>
+        <div id="box"></div>
+        <div class="login">
+            <div class="login_title">多重都要后台管理</div>
+            <div class="login_container">
+                <div class="login_titles">管理员登陆系统</div>
+                <div class="login_message">
+                    <div id="login_message" style="display: block; background: green;">登陆成功，1s后自动跳转...</div>
+                </div>
+                <div class="login_user">
+                    <img src="./img/user.png">
+                    <input id="user" type="text" placeholder="请输入用户名">
+                </div>
+                <div class="login_pwd login_user">
+                    <img src="./img/pwd.png">
+                    <input id="pwd" type="text" placeholder="请输入密码">
+                </div>
+                <div class="login_remenber">
+                    <input id="remenber_pwd" type="checkbox" value="1" checked=""> 记住密码
+                </div>
+                <div class="login_submit" onclick="login()">
+                    <div>登陆</div>
+                </div>
+            </div>
+        </div>
+
+
+        <script src="./login.js"></script>
+    </body>
+</html>

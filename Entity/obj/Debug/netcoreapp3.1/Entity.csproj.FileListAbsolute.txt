@@ -1,0 +1,8 @@
+C:\netcore\WebApplication1\Entity\bin\Debug\netcoreapp3.1\Entity.deps.json
+C:\netcore\WebApplication1\Entity\bin\Debug\netcoreapp3.1\Entity.dll
+C:\netcore\WebApplication1\Entity\bin\Debug\netcoreapp3.1\Entity.pdb
+C:\netcore\WebApplication1\Entity\obj\Debug\netcoreapp3.1\Entity.AssemblyInfoInputs.cache
+C:\netcore\WebApplication1\Entity\obj\Debug\netcoreapp3.1\Entity.AssemblyInfo.cs
+C:\netcore\WebApplication1\Entity\obj\Debug\netcoreapp3.1\Entity.csproj.CoreCompileInputs.cache
+C:\netcore\WebApplication1\Entity\obj\Debug\netcoreapp3.1\Entity.dll
+C:\netcore\WebApplication1\Entity\obj\Debug\netcoreapp3.1\Entity.pdb

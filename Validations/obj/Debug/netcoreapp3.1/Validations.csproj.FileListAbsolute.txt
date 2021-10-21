@@ -1,0 +1,16 @@
+C:\netcore\WebApplication1\Validations\bin\Debug\netcoreapp3.1\Validations.deps.json
+C:\netcore\WebApplication1\Validations\bin\Debug\netcoreapp3.1\Validations.dll
+C:\netcore\WebApplication1\Validations\bin\Debug\netcoreapp3.1\Validations.pdb
+C:\netcore\WebApplication1\Validations\bin\Debug\netcoreapp3.1\Common.dll
+C:\netcore\WebApplication1\Validations\bin\Debug\netcoreapp3.1\Entity.dll
+C:\netcore\WebApplication1\Validations\bin\Debug\netcoreapp3.1\Utility.dll
+C:\netcore\WebApplication1\Validations\bin\Debug\netcoreapp3.1\Common.pdb
+C:\netcore\WebApplication1\Validations\bin\Debug\netcoreapp3.1\Entity.pdb
+C:\netcore\WebApplication1\Validations\bin\Debug\netcoreapp3.1\Utility.pdb
+C:\netcore\WebApplication1\Validations\obj\Debug\netcoreapp3.1\Validations.csprojAssemblyReference.cache
+C:\netcore\WebApplication1\Validations\obj\Debug\netcoreapp3.1\Validations.AssemblyInfoInputs.cache
+C:\netcore\WebApplication1\Validations\obj\Debug\netcoreapp3.1\Validations.AssemblyInfo.cs
+C:\netcore\WebApplication1\Validations\obj\Debug\netcoreapp3.1\Validations.csproj.CoreCompileInputs.cache
+C:\netcore\WebApplication1\Validations\obj\Debug\netcoreapp3.1\Validations.csproj.CopyComplete
+C:\netcore\WebApplication1\Validations\obj\Debug\netcoreapp3.1\Validations.dll
+C:\netcore\WebApplication1\Validations\obj\Debug\netcoreapp3.1\Validations.pdb
