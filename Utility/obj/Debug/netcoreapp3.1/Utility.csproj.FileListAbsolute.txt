@@ -1,0 +1,15 @@
+C:\netcore\WebApplication1\Utility\bin\Debug\netcoreapp3.1\Utility.deps.json
+C:\netcore\WebApplication1\Utility\bin\Debug\netcoreapp3.1\Utility.runtimeconfig.json
+C:\netcore\WebApplication1\Utility\bin\Debug\netcoreapp3.1\Utility.runtimeconfig.dev.json
+C:\netcore\WebApplication1\Utility\bin\Debug\netcoreapp3.1\Utility.dll
+C:\netcore\WebApplication1\Utility\bin\Debug\netcoreapp3.1\Utility.pdb
+C:\netcore\WebApplication1\Utility\bin\Debug\netcoreapp3.1\Entity.dll
+C:\netcore\WebApplication1\Utility\bin\Debug\netcoreapp3.1\Entity.pdb
+C:\netcore\WebApplication1\Utility\obj\Debug\netcoreapp3.1\Utility.csprojAssemblyReference.cache
+C:\netcore\WebApplication1\Utility\obj\Debug\netcoreapp3.1\Utility.AssemblyInfoInputs.cache
+C:\netcore\WebApplication1\Utility\obj\Debug\netcoreapp3.1\Utility.AssemblyInfo.cs
+C:\netcore\WebApplication1\Utility\obj\Debug\netcoreapp3.1\Utility.csproj.CoreCompileInputs.cache
+C:\netcore\WebApplication1\Utility\obj\Debug\netcoreapp3.1\Utility.csproj.CopyComplete
+C:\netcore\WebApplication1\Utility\obj\Debug\netcoreapp3.1\Utility.dll
+C:\netcore\WebApplication1\Utility\obj\Debug\netcoreapp3.1\Utility.pdb
+C:\netcore\WebApplication1\Utility\obj\Debug\netcoreapp3.1\Utility.genruntimeconfig.cache

@@ -1,0 +1,16 @@
+C:\netcore\WebApplication1\WebCore\bin\Debug\netcoreapp3.1\Service.deps.json
+C:\netcore\WebApplication1\WebCore\bin\Debug\netcoreapp3.1\Service.dll
+C:\netcore\WebApplication1\WebCore\bin\Debug\netcoreapp3.1\Service.pdb
+C:\netcore\WebApplication1\WebCore\bin\Debug\netcoreapp3.1\Common.dll
+C:\netcore\WebApplication1\WebCore\bin\Debug\netcoreapp3.1\Entity.dll
+C:\netcore\WebApplication1\WebCore\bin\Debug\netcoreapp3.1\Utility.dll
+C:\netcore\WebApplication1\WebCore\bin\Debug\netcoreapp3.1\Common.pdb
+C:\netcore\WebApplication1\WebCore\bin\Debug\netcoreapp3.1\Entity.pdb
+C:\netcore\WebApplication1\WebCore\bin\Debug\netcoreapp3.1\Utility.pdb
+C:\netcore\WebApplication1\WebCore\obj\Debug\netcoreapp3.1\Service.csprojAssemblyReference.cache
+C:\netcore\WebApplication1\WebCore\obj\Debug\netcoreapp3.1\Service.AssemblyInfoInputs.cache
+C:\netcore\WebApplication1\WebCore\obj\Debug\netcoreapp3.1\Service.AssemblyInfo.cs
+C:\netcore\WebApplication1\WebCore\obj\Debug\netcoreapp3.1\Service.csproj.CoreCompileInputs.cache
+C:\netcore\WebApplication1\WebCore\obj\Debug\netcoreapp3.1\Service.csproj.CopyComplete
+C:\netcore\WebApplication1\WebCore\obj\Debug\netcoreapp3.1\Service.dll
+C:\netcore\WebApplication1\WebCore\obj\Debug\netcoreapp3.1\Service.pdb
