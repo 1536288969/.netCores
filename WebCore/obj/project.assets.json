@@ -1700,10 +1700,7 @@
         },
         "runtime": {
           "bin/placeholder/Common.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
+        }
       },
       "Entity/1.0.0": {
         "type": "project",
@@ -1717,10 +1714,7 @@
         },
         "runtime": {
           "bin/placeholder/Entity.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
+        }
       },
       "Utility/1.0.0": {
         "type": "project",
@@ -1735,10 +1729,7 @@
         },
         "runtime": {
           "bin/placeholder/Utility.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
+        }
       }
     }
   },
@@ -6455,24 +6446,30 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\jlw\\.nuget\\packages\\": {},
+    "C:\\Users\\zhibaba\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\netcore\\WebApplication1\\WebCore\\Service.csproj",
+      "projectUniqueName": "D:\\GItcode\\.netCores\\WebCore\\Service.csproj",
       "projectName": "Service",
-      "projectPath": "C:\\netcore\\WebApplication1\\WebCore\\Service.csproj",
-      "packagesPath": "C:\\Users\\jlw\\.nuget\\packages\\",
-      "outputPath": "C:\\netcore\\WebApplication1\\WebCore\\obj\\",
+      "projectPath": "D:\\GItcode\\.netCores\\WebCore\\Service.csproj",
+      "packagesPath": "C:\\Users\\zhibaba\\.nuget\\packages\\",
+      "outputPath": "D:\\GItcode\\.netCores\\WebCore\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\jlw\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\zhibaba\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -6485,11 +6482,11 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\netcore\\WebApplication1\\Common\\Common.csproj": {
-              "projectPath": "C:\\netcore\\WebApplication1\\Common\\Common.csproj"
+            "D:\\GItcode\\.netCores\\Common\\Common.csproj": {
+              "projectPath": "D:\\GItcode\\.netCores\\Common\\Common.csproj"
             },
-            "C:\\netcore\\WebApplication1\\Entity\\Entity.csproj": {
-              "projectPath": "C:\\netcore\\WebApplication1\\Entity\\Entity.csproj"
+            "D:\\GItcode\\.netCores\\Entity\\Entity.csproj": {
+              "projectPath": "D:\\GItcode\\.netCores\\Entity\\Entity.csproj"
             }
           }
         }
@@ -6514,14 +6511,11 @@
         "assetTargetFallback": true,
         "warn": true,
         "frameworkReferences": {
-          "Microsoft.AspNetCore.App": {
-            "privateAssets": "none"
-          },
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }

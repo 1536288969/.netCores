@@ -1,4 +1,5 @@
 using Autofac;
+using Autofac.Extensions.DependencyInjection;
 using Common;
 using Common.AutofacManager;
 using Common.Repository;
@@ -17,6 +18,7 @@ using Service.Service;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
 using Utility;
 
@@ -36,14 +38,16 @@ namespace WebApplication1
         {
             var builder = new ContainerBuilder();
             //builder.RegisterGeneric(typeof(Repository<>)).As(typeof(IRepository<>)).InstancePerDependency();
-            Services = services;
             services.AddHttpContextAccessor();
             services.AddControllers().AddControllersAsServices();
             services.AddMvc().AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<IValidator>()).SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
             services.AddSession();
             services.AddMemoryCache();
             services.AddControllersWithViews().AddControllersAsServices();
-        
+            builder.RegisterAssemblyTypes(Assembly.GetExecutingAssembly());//注入当前程程序集
+            builder.Populate(services);
+            var contaner = builder.Build();
+            //return new AutofacServiceProvider(contaner);
             //services.AddSingleton<IStudentRepository, MockStudentRepository>();
             //services.AddScoped<IManagerRepository, ManagerRepository>();
             //var connection = Configuration.GetConnectionString("sqlserver");
@@ -52,7 +56,7 @@ namespace WebApplication1
         public void ConfigureContainer(ContainerBuilder builder)
         {
             //builder.RegisterModule<DefaultModuleRegister>();
-            Services.AddModule(builder, Configuration);
+            //Services.AddModule(builder, Configuration);
         }
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -71,7 +75,7 @@ namespace WebApplication1
             app.UseStaticFiles();
 
             app.UseRouting();
-            
+
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
