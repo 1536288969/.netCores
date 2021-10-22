@@ -13,6 +13,7 @@ namespace Entity.Manage
     [Table("Manager")]
     public class Manager : Base
     {
+
         /// <summary>
         /// 管理员账户
         /// </summary>

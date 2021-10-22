@@ -1,13 +1,18 @@
 ﻿using Autofac;
 using Autofac.Extensions.DependencyInjection;
+using Autofac.Extras.DynamicProxy;
 using Common.CacheManager;
 using Common.Repository;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ApplicationParts;
+using Microsoft.AspNetCore.Mvc.Controllers;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyModel;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Runtime.Loader;
@@ -17,37 +22,78 @@ using VOL.Core.CacheManager;
 
 namespace Common.AutofacManager
 {
+      
     public static class AutofacContainerModuleExtension
     {
-      
 
         //  private static bool _isMysql = false;
         public static IServiceCollection AddModule(this IServiceCollection services, ContainerBuilder builder, IConfiguration configuration)
         {
-            //services.AddSession();
-            //services.AddMemoryCache();
-            //初始化配置文件
+            // var assembly = GetType().GetTypeInfo().Assembly;
+
             AppSetting.Init(services, configuration);
 
-            builder.RegisterAssemblyTypes(Assembly.Load("Service"), Assembly.Load("Service"))
-                 .Where(t => t.Name.EndsWith("Service"))
-                 .AsImplementedInterfaces();
+            //builder.RegisterType<ManagerService>().As<IManagerService>().InstancePerLifetimeScope();
+            builder.RegisterType(typeof(Repository<>))
+          .As(typeof(IRepository<>))
+          .InstancePerLifetimeScope();
 
-            builder.RegisterGeneric(typeof(Repository<>))
-       .As(typeof(IRepository<>))
-       .InstancePerLifetimeScope();
+            builder.RegisterAssemblyTypes(Assembly.Load("Service"))
+                    .Where(t => t.Name.EndsWith("Service")).InstancePerDependency()
+                   .AsImplementedInterfaces().EnableInterfaceInterceptors().PropertiesAutowired(PropertyWiringOptions.AllowCircularDependencies);
+            //     builder
+            //.RegisterAssemblyTypes(AppDomain.CurrentDomain.GetAssemblies())
+            //.Where(t => t.Name.EndsWith("Service"))
+            //.AsImplementedInterfaces();
+            var connection = AppSetting.DbConnectionString;
+            services.AddDbContextPool<DataDBContext>(optionsBuilder => { optionsBuilder.UseSqlServer(connection).UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking); }, 64);
 
-            var ApplicationContainer =builder.Build();
-            new AutofacServiceProvider(ApplicationContainer);
-
-            //builder.RegisterAssemblyTypes(GetAssemblyByName("Service")).Where(a => a.Name.EndsWith("Service")).AsImplementedInterfaces();
             //builder.RegisterAssemblyTypes(GetAssemblyByName("Common")).Where(a => a.Name.EndsWith("Repository")).AsImplementedInterfaces();
             //var assemblys = Assembly.Load("Service");//Service是继承接口的实现方法类库名称
 
             //var baseType = typeof(IDependency);//IDependency 是一个接口（所有要实现依赖注入的借口都要继承该接口）
             //builder.RegisterAssemblyTypes(assemblys)
-            // .Where(m => baseType.IsAssignableFrom(m) && m != baseType)
+            // .Where(m => baseType.IsAssignableFrom(m) && m != baseType).InstancePerDependency()
             // .AsImplementedInterfaces().InstancePerLifetimeScope();
+            //builder.RegisterType<ManagerService>().As<ICacheService>().SingleInstance();
+
+            //builder.RegisterAssemblyTypes(Assembly.Load("Service"), Assembly.Load("Service"))
+            //   .Where(t => t.Name.EndsWith("ManagerService"))
+            //   .AsImplementedInterfaces().PropertiesAutowired(PropertyWiringOptions.AllowCircularDependencies);
+
+            //var assemblysServices = Assembly.Load("Service.Service");
+            ////builder.RegisterAssemblyTypes(assemblysServices)
+            ////.InstancePerDependency()//默认模式，每次调用，都会重新实例化对象；每次请求都创建一个新的对象
+            ////.AsImplementedInterfaces()//是以接口方式进行注入,注入这些类的所有的公共接口作为服务(除了释放资源)
+            ////.EnableInterfaceInterceptors(); //引用Autofac.Extras.DynamicProxy;应用拦截器//注册Repository
+            ////var assemblysRepository = Assembly.Load("Common.Repository");
+            //builder.RegisterAssemblyTypes(assemblysServices)
+            //.InstancePerDependency()//默认模式，每次调用，都会重新实例化对象；每次请求都创建一个新的对象
+            //.AsImplementedInterfaces()//是以接口方式进行注入,注入这些类的所有的公共接口作为服务(除了释放资源)
+            //.EnableInterfaceInterceptors();
+            //services.AddSession();
+            //services.AddMemoryCache();
+            //初始化配置文件
+           
+              
+
+
+            //var basePath = Microsoft.DotNet.PlatformAbstractions.ApplicationEnvironment.ApplicationBasePath;
+            //var ServicesDllFile = Path.Combine(basePath, "Service.dll");//获取注入项目绝对路径
+            //var assemblysServices = Assembly.LoadFile(ServicesDllFile);//直接采用加载文件的方法
+            //builder.RegisterAssemblyTypes(assemblysServices).AsImplementedInterfaces();
+
+            //var RepositoryDllFile = Path.Combine(basePath, "Common.dll");
+            //var RepositoryServices = Assembly.LoadFile(RepositoryDllFile);//直接采用加载文件的方法
+            //builder.RegisterAssemblyTypes(RepositoryServices).AsImplementedInterfaces();
+
+
+
+            //     builder.RegisterGeneric(typeof(Repository<>))
+            //.As(typeof(IRepository<>))
+            //.InstancePerLifetimeScope();
+
+
 
 
             //Type baseType = typeof(IDependency);
@@ -93,8 +139,7 @@ namespace Common.AutofacManager
             //mysql8.x的版本使用Pomelo.EntityFrameworkCore.MySql 3.1会产生异常，需要在字符串连接上添加allowPublicKeyRetrieval=true
 
 
-            var connection = AppSetting.DbConnectionString;
-            services.AddDbContextPool<DataDBContext>(optionsBuilder => { optionsBuilder.UseSqlServer(connection).UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking); }, 64);
+          
             //}
             //else if (DBType.Name == DbCurrentType.PgSql.ToString())
             //{

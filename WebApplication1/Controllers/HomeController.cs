@@ -21,7 +21,7 @@ namespace WebApplication1.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly IManagerService _imanagerRepository;
+        public readonly IManagerService _imanagerRepository;
 
         public HomeController(IManagerService imanagerRepository)
         {

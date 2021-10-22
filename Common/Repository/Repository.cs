@@ -1,4 +1,5 @@
 ﻿
+using Castle.Core.Configuration;
 using Common.AutofacManager;
 using Common.OrderByExpressions;
 using Common.Repository;
@@ -21,7 +22,8 @@ namespace Common.Repository
 {
     public class Repository<TEntity>:  IRepository<TEntity> where TEntity : class
     {
-        protected  DataDBContext Context { get; }
+
+        public DataDBContext Context { get; }
 
         protected DbSet<TEntity> Set;
         public Repository(DataDBContext dataDBContext)

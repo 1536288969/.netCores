@@ -1,4 +1,5 @@
 ﻿using Common.AutofacManager;
+using Common.Repository;
 using Entity;
 using Entity.Manage;
 using System;

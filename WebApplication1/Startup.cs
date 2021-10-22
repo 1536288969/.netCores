@@ -1,24 +1,13 @@
 using Autofac;
-using Common;
 using Common.AutofacManager;
-using Common.Repository;
 using FluentValidation;
 using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Service.IService;
-using Service.Service;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Utility;
 
 namespace WebApplication1
 {
@@ -34,7 +23,7 @@ namespace WebApplication1
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            var builder = new ContainerBuilder();
+
             //builder.RegisterGeneric(typeof(Repository<>)).As(typeof(IRepository<>)).InstancePerDependency();
             Services = services;
             services.AddHttpContextAccessor();
@@ -42,8 +31,9 @@ namespace WebApplication1
             services.AddMvc().AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<IValidator>()).SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
             services.AddSession();
             services.AddMemoryCache();
-            services.AddControllersWithViews().AddControllersAsServices();
-        
+            //services.AddScoped<Common.AutofacManager.IManagerService, ManagerService>();
+            //ContainerBuilder builder = new ContainerBuilder();
+            //Services.AddModule(builder, Configuration);
             //services.AddSingleton<IStudentRepository, MockStudentRepository>();
             //services.AddScoped<IManagerRepository, ManagerRepository>();
             //var connection = Configuration.GetConnectionString("sqlserver");
@@ -51,6 +41,7 @@ namespace WebApplication1
         }
         public void ConfigureContainer(ContainerBuilder builder)
         {
+            //builder.RegisterModule(new DefaultModuleRegister(builder));
             //builder.RegisterModule<DefaultModuleRegister>();
             Services.AddModule(builder, Configuration);
         }
