@@ -32,6 +32,7 @@ namespace Common.AutofacManager
             builder.RegisterAssemblyTypes(Assembly.Load("Service"), Assembly.Load("Service"))
                  .Where(t => t.Name.EndsWith("Service"))
                  .AsImplementedInterfaces();
+          
 
             builder.RegisterGeneric(typeof(Repository<>))
        .As(typeof(IRepository<>))

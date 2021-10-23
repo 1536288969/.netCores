@@ -36,17 +36,17 @@ namespace WebApplication1
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            var builder = new ContainerBuilder();
+            Services = services;
             //builder.RegisterGeneric(typeof(Repository<>)).As(typeof(IRepository<>)).InstancePerDependency();
+            services.AddRazorPages();
+            services.AddDbContext<DataDBContext>(opt => opt.UseSqlServer(Configuration.GetSection("Connection:DbConnectionString").Value));
             services.AddHttpContextAccessor();
             services.AddControllers().AddControllersAsServices();
             services.AddMvc().AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<IValidator>()).SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
             services.AddSession();
             services.AddMemoryCache();
             services.AddControllersWithViews().AddControllersAsServices();
-            builder.RegisterAssemblyTypes(Assembly.GetExecutingAssembly());//注入当前程程序集
-            builder.Populate(services);
-            var contaner = builder.Build();
+           
             //return new AutofacServiceProvider(contaner);
             //services.AddSingleton<IStudentRepository, MockStudentRepository>();
             //services.AddScoped<IManagerRepository, ManagerRepository>();
@@ -55,7 +55,7 @@ namespace WebApplication1
         }
         public void ConfigureContainer(ContainerBuilder builder)
         {
-            //builder.RegisterModule<DefaultModuleRegister>();
+            builder.RegisterModule<DefaultModuleRegister>();
             //Services.AddModule(builder, Configuration);
         }
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
