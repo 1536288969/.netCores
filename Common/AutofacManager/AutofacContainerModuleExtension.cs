@@ -24,10 +24,13 @@ namespace Common.AutofacManager
         //  private static bool _isMysql = false;
         public static IServiceCollection AddModule(this IServiceCollection services, ContainerBuilder builder, IConfiguration configuration)
         {
+
             //services.AddSession();
             //services.AddMemoryCache();
             //初始化配置文件
             AppSetting.Init(services, configuration);
+            var connection = AppSetting.DbConnectionString;
+            //services.AddDbContextPool<DataDBContext>(optionsBuilder => { optionsBuilder.UseSqlServer(connection); }, 64);
 
             builder.RegisterAssemblyTypes(Assembly.Load("Service"), Assembly.Load("Service"))
                  .Where(t => t.Name.EndsWith("Service"))
@@ -38,8 +41,8 @@ namespace Common.AutofacManager
        .As(typeof(IRepository<>))
        .InstancePerLifetimeScope();
 
-            var ApplicationContainer =builder.Build();
-            new AutofacServiceProvider(ApplicationContainer);
+           // var ApplicationContainer =builder.Build();
+            //new AutofacServiceProvider(ApplicationContainer);
 
             //builder.RegisterAssemblyTypes(GetAssemblyByName("Service")).Where(a => a.Name.EndsWith("Service")).AsImplementedInterfaces();
             //builder.RegisterAssemblyTypes(GetAssemblyByName("Common")).Where(a => a.Name.EndsWith("Repository")).AsImplementedInterfaces();
@@ -94,8 +97,7 @@ namespace Common.AutofacManager
             //mysql8.x的版本使用Pomelo.EntityFrameworkCore.MySql 3.1会产生异常，需要在字符串连接上添加allowPublicKeyRetrieval=true
 
 
-            var connection = AppSetting.DbConnectionString;
-            services.AddDbContextPool<DataDBContext>(optionsBuilder => { optionsBuilder.UseSqlServer(connection).UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking); }, 64);
+          
             //}
             //else if (DBType.Name == DbCurrentType.PgSql.ToString())
             //{

@@ -31,12 +31,13 @@ namespace WebApplication1.Controllers
         [HttpGet]
         public IActionResult Index()
         {
-            
-           
+
+            var sjtu = _imanagerRepository.Query().ToList();
+            var s = sjtu;
             //if (!ModelState.IsValid)
             //    return Content("失败了");
-           
-                return View();
+
+            return View();
             //return View();
         }
         [HttpPost]

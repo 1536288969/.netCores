@@ -16,3 +16,12 @@ D:\GItcode\.netCores\Entity\obj\Debug\netcoreapp3.1\Entity.AssemblyInfo.cs
 D:\GItcode\.netCores\Entity\obj\Debug\netcoreapp3.1\Entity.csproj.CoreCompileInputs.cache
 D:\GItcode\.netCores\Entity\obj\Debug\netcoreapp3.1\Entity.dll
 D:\GItcode\.netCores\Entity\obj\Debug\netcoreapp3.1\Entity.pdb
+C:\码云\.netCores\.netCores\Entity\bin\Debug\netcoreapp3.1\Entity.deps.json
+C:\码云\.netCores\.netCores\Entity\bin\Debug\netcoreapp3.1\Entity.dll
+C:\码云\.netCores\.netCores\Entity\bin\Debug\netcoreapp3.1\Entity.pdb
+C:\码云\.netCores\.netCores\Entity\obj\Debug\netcoreapp3.1\Entity.csprojAssemblyReference.cache
+C:\码云\.netCores\.netCores\Entity\obj\Debug\netcoreapp3.1\Entity.AssemblyInfoInputs.cache
+C:\码云\.netCores\.netCores\Entity\obj\Debug\netcoreapp3.1\Entity.AssemblyInfo.cs
+C:\码云\.netCores\.netCores\Entity\obj\Debug\netcoreapp3.1\Entity.csproj.CoreCompileInputs.cache
+C:\码云\.netCores\.netCores\Entity\obj\Debug\netcoreapp3.1\Entity.dll
+C:\码云\.netCores\.netCores\Entity\obj\Debug\netcoreapp3.1\Entity.pdb

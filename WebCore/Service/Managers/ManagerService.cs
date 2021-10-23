@@ -35,9 +35,9 @@ namespace Service.Service.Managers
         }
         public List<Manager> Query()
         {
-            // var ListModel = _manager.Query(null, _orderbyinfo).ToList();
-            //return ListModel;
-            return null;
+             var ListModel = _manager.Query().ToList();
+            return ListModel;
+            //return null;
         }
         public Manager Find(int id)
         {

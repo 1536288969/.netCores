@@ -38,8 +38,9 @@ namespace WebApplication1
         {
             Services = services;
             //builder.RegisterGeneric(typeof(Repository<>)).As(typeof(IRepository<>)).InstancePerDependency();
-            services.AddRazorPages();
-            services.AddDbContext<DataDBContext>(opt => opt.UseSqlServer(Configuration.GetSection("Connection:DbConnectionString").Value));
+            services.AddDbContext<DataDBContext>
+                (opt => opt.UseSqlServer(Configuration.GetSection("Connection:DbConnectionString").Value));
+
             services.AddHttpContextAccessor();
             services.AddControllers().AddControllersAsServices();
             services.AddMvc().AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<IValidator>()).SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
@@ -55,8 +56,8 @@ namespace WebApplication1
         }
         public void ConfigureContainer(ContainerBuilder builder)
         {
-            builder.RegisterModule<DefaultModuleRegister>();
-            //Services.AddModule(builder, Configuration);
+           // builder.RegisterModule<DefaultModuleRegister>();
+            Services.AddModule(builder, Configuration);
         }
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

@@ -2262,7 +2262,10 @@
         },
         "runtime": {
           "bin/placeholder/Common.dll": {}
-        }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       },
       "Entity/1.0.0": {
         "type": "project",
@@ -2276,7 +2279,10 @@
         },
         "runtime": {
           "bin/placeholder/Entity.dll": {}
-        }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       },
       "Service/1.0.0": {
         "type": "project",
@@ -2290,7 +2296,10 @@
         },
         "runtime": {
           "bin/placeholder/Service.dll": {}
-        }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       },
       "Utility/1.0.0": {
         "type": "project",
@@ -2305,7 +2314,10 @@
         },
         "runtime": {
           "bin/placeholder/Utility.dll": {}
-        }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       },
       "Validations/1.0.0": {
         "type": "project",
@@ -2319,7 +2331,10 @@
         },
         "runtime": {
           "bin/placeholder/Validations.dll": {}
-        }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       }
     }
   },
@@ -8020,30 +8035,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\zhibaba\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {},
+    "C:\\Users\\jlw\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\GItcode\\.netCores\\WebApplication1\\WebApplication1.csproj",
+      "projectUniqueName": "C:\\码云\\.netCores\\.netCores\\WebApplication1\\WebApplication1.csproj",
       "projectName": "WebApplication1",
-      "projectPath": "D:\\GItcode\\.netCores\\WebApplication1\\WebApplication1.csproj",
-      "packagesPath": "C:\\Users\\zhibaba\\.nuget\\packages\\",
-      "outputPath": "D:\\GItcode\\.netCores\\WebApplication1\\obj\\",
+      "projectPath": "C:\\码云\\.netCores\\.netCores\\WebApplication1\\WebApplication1.csproj",
+      "packagesPath": "C:\\Users\\jlw\\.nuget\\packages\\",
+      "outputPath": "C:\\码云\\.netCores\\.netCores\\WebApplication1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\zhibaba\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\jlw\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -8056,17 +8065,17 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "D:\\GItcode\\.netCores\\Common\\Common.csproj": {
-              "projectPath": "D:\\GItcode\\.netCores\\Common\\Common.csproj"
+            "C:\\码云\\.netCores\\.netCores\\Common\\Common.csproj": {
+              "projectPath": "C:\\码云\\.netCores\\.netCores\\Common\\Common.csproj"
             },
-            "D:\\GItcode\\.netCores\\Utility\\Utility.csproj": {
-              "projectPath": "D:\\GItcode\\.netCores\\Utility\\Utility.csproj"
+            "C:\\码云\\.netCores\\.netCores\\Utility\\Utility.csproj": {
+              "projectPath": "C:\\码云\\.netCores\\.netCores\\Utility\\Utility.csproj"
             },
-            "D:\\GItcode\\.netCores\\Validations\\Validations.csproj": {
-              "projectPath": "D:\\GItcode\\.netCores\\Validations\\Validations.csproj"
+            "C:\\码云\\.netCores\\.netCores\\Validations\\Validations.csproj": {
+              "projectPath": "C:\\码云\\.netCores\\.netCores\\Validations\\Validations.csproj"
             },
-            "D:\\GItcode\\.netCores\\WebCore\\Service.csproj": {
-              "projectPath": "D:\\GItcode\\.netCores\\WebCore\\Service.csproj"
+            "C:\\码云\\.netCores\\.netCores\\WebCore\\Service.csproj": {
+              "projectPath": "C:\\码云\\.netCores\\.netCores\\WebCore\\Service.csproj"
             }
           }
         }
@@ -8118,7 +8127,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }
